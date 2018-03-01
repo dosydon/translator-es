@@ -21,3 +21,21 @@ export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 ```
 cd $(HOME)/gurobi650/linux64; python setup.py install
 ```
+
+# How to Use
+
+This program has two additional options.
+"group\_choice" lets you choose the strategy used to group fluents to form variables.
+Thits program seeks to cover the set of all fluents using the fewest mutex+none groups (subsets
+of fluents).
+"default" greedily selects the
+mutex+none group with the largest cardinality until all fluents are coveredi
+group"exact" solves the set covering problem optimally.
+"essential" utilizes exactly1-groups to find inessential fluents.
+With "--axiom" option enabled, the program express exactly1-groups as axioms.
+
+```
+--group_choice GROUP_CHOICE
+	default | exact | essential 
+ --axiom               exactly1 group to axioms
+```
