@@ -29,8 +29,10 @@ This program has two additional options.
 Thits program seeks to cover the set of all fluents using the fewest mutex+none groups (subsets
 of fluents).
 "default" greedily selects the
-mutex+none group with the largest cardinality until all fluents are coveredi
-group"exact" solves the set covering problem optimally.
+mutex+none group with the largest cardinality until all fluents are covered.
+
+"exact" solves the set covering problem optimally.
+
 "essential" utilizes exactly1-groups to find inessential fluents.
 With "--axiom" option enabled, the program express exactly1-groups as axioms.
 
